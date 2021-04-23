@@ -1,0 +1,166 @@
+.p{
+  font-family:'sans-serif';
+  font-size:20px;
+}
+
+.container {
+    width: 80%;
+    margin: 3% auto 0;
+    background-color: #FEFEFE;
+    padding: 2% 2%;
+    border-radius: 10px
+}
+
+/*表单部分*/
+.form_input{
+  -web-kit-appearance:none;
+  -moz-appearance: none;
+  font-size:14px;
+  height:31px;
+  width:30%;
+  border-radius:4px;
+  border:1px solid #c8cccf;
+  color:#6a6f77;
+}
+
+.form_radio{
+  /*这里需要补充更优美的设计*/
+  -web-kit-appearance:none;
+  -moz-appearance: none;
+}
+
+.button {
+appearance: none;
+-moz-appearance: none;
+-webkit-appearance: none;
+text-decoration : none;
+background-color: #FFFFFF;
+color: black;
+border: 2px solid #00CEFF;
+padding: 6px 16px;
+text-align: center;
+font-size: 16px;
+margin: 20px 20px;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+cursor: pointer;
+}
+.button:hover {
+background-color: #00CEFF;
+color: white;
+}
+
+
+.single_button {
+appearance: none;
+-moz-appearance: none;
+-webkit-appearance: none;
+text-decoration : none;
+background-color: #FFFFFF;
+color: black;
+border: 2px solid #00CEFF;
+padding: 6px 16px;
+text-align: center;
+font-size: 16px;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+cursor: pointer;
+}
+.single_button:hover {
+background-color: #00CEFF;
+color: white;
+}
+
+/*表格*/
+#dataDic
+{
+	font-family:'sans-serif';
+  width:100%;
+	border-collapse:collapse;
+}
+#dataDic td, #dataDic th 
+{
+	font-size:1em;
+	padding:3px 7px 2px 7px;
+}
+#dataDic th 
+{
+	font-size:1.1em;
+	text-align:left;
+	padding-bottom:4px;
+	background-color:#55eeee;
+	color:#030303;
+}
+#dataDic tr td 
+{
+	color:#030303;
+	background-color:#aaeeff;
+}
+
+/*checkbox*/
+/* Customize the label (the container) */
+.check_container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.check_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #8ef1f1;
+}
+
+/* On mouse-over, add a grey background color */
+.check_container:hover input ~ .checkmark {
+  background-color: #42c6ee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check_container input:checked ~ .checkmark {
+  background-color: #42c6ee;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.check_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.check_container .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

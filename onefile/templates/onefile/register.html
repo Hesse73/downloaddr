@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'onefile/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'onefile/main.css' %}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="container">
+        <form action="/onefile/register/" method="post" onsubmit="return checkPassword(this)">
+            <p>account:</p>
+            <input type="text" class="form_input" name="account" value="" required>
+            <p>password:</p>
+            <input type="password" class="form_input" name="password" required>
+            <p>password again:</p>
+            <input type="password" class="form_input" name="password_again" required>
+            <p>username: </p>
+            <input type="text" class="form_input" name="username" required>
+            <input type="submit" class="single_button" value="Sign up" >
+        </form>
+    </div>
+    {# 这里增加密码检测，当两次不同时点击提交会失败 #}
+    <script>
+    function checkPassword(form) { 
+        password1 = form.password.value; 
+        password2 = form.password_again.value; 
+     
+        if (password1 != password2) { 
+            alert ("the two passwords donot match!\ttry again!") 
+            return false; 
+        } 
+    } 
+    </script>
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags %}
+    <script>alert("{{ message }}")</script> {% endif %}
+    {% endfor %}
+    {% endif %}
+
+</body>
+
+</html>

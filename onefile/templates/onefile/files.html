@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'onefile/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'onefile/main.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <title>Your files</title>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="container">
+        {% if not empflag %}
+        <table id="dataDic">
+            <tr>
+                <th>filename</th>
+                <th>filesize</th>
+            </tr>
+            {% for filename,filesize,fid in files %}
+            <tr>
+                <td><a href='/onefile/download?file={{fid}}'>{{filename}}</td>
+                <td>{{filesize}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+        {% if empflag %}
+            <p>You have no files now.</p>
+            <p>Maybe you can click the upload button to upload some~</p>
+            <a href="/onefile/upload" class="button">upload</a>
+        {% endif %}
+    </div>
+    
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags %}
+    <script>alert("{{ message }}")</script> {% endif %}
+    {% endfor %}
+    {% endif %}
+</body>
+</html>
