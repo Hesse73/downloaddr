@@ -139,6 +139,7 @@ while(True):
                                 belong = belong[:-1]
                             print('"%s","%s","%s",'%(filename,filepath,belong))
                             AddF.add_one_file(filename,filepath,belong)
+                    configfile.close()
             except:
                 print('config file is invalid, please check it')
         else:

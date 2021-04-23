@@ -12,4 +12,7 @@ sudo python3 manage.py migrate
 sudo python3 manage.py makemigrations onefile
 sudo python3 manage.py migrate
 
+echo "generating secret key..."
+sudo python3 set_secret_key.py
+
 echo "you can now use:>python3 manage.py runserver 0:8000 to run site."
