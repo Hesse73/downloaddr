@@ -21,7 +21,7 @@ def index(request):
         user = Users.objects.get(id=userId)
         username = user.uname
         account = user.uaccount
-        userInfo = 'username: '+str(username)+'account: '+str(account)
+        userInfo = 'username: '+str(username)+' account: '+str(account)
         hasLogin = True
     else:
         userInfo = "I don't know you, maybe you can sign up?"

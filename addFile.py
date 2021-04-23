@@ -1,4 +1,3 @@
-from downloader.settings import *
 import sqlite3
 import os
 from stdiomask import getpass
@@ -7,7 +6,7 @@ import json
 
 class AddFile():
     def __init__(self):
-        self.db = sqlite3.connect(database=DATABASES['default']['NAME'])
+        self.db = sqlite3.connect(database='db.sqlite3')
         self.db_cursor = self.db.cursor()
         get_user_cmd = 'SELECT UACCOUNT FROM USERS;'
         self.db_cursor.execute(get_user_cmd)
