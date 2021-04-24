@@ -176,7 +176,6 @@ def download(request):
             response =FileResponse(file)
             response['Content-Type']='application/octet-stream'
             response['Content-Disposition']='attachment;filename="%s"'%files[file_demanded]['name']
-            file.close()
             return response
 
 def quit(request):
