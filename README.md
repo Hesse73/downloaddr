@@ -1,11 +1,21 @@
-# downloaddr
-a very small download server using django
+# Downloaddr
+A very small download server using django
 
-use this command to get packages and set database:
- > bash install.sh
+Get packages and set database(`sqlite3`):
+```
+bash install.sh
+```
 
-and use this to run:
- > python3 manage.py runserver 0:port
+Run server:
+```
+python3 manage.py runserver 0:port
+```
+
+Add/clear files for users(identified by account name):
+```
+python3 addFile.py
+python3 clearFile.py
+```
 
 ### TODO
 
