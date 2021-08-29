@@ -6,3 +6,9 @@ use this command to get packages and set database:
 
 and use this to run:
  > python3 manage.py runserver 0:port
+
+### TODO
+
+ - support for multi-threaded download
+ - uploading from browser(which is not safe)
+ - file encryption
